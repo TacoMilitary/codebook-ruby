@@ -2,7 +2,6 @@ def number_places_upto_1000(number)
     number = number.abs 
     # turns the number into its absolute value so the math works with negative numbers
 
-    # checks if the place even exists in the number.
     # uses modulo on the thousands place to strip the number of any other places above one thousand
     thousands = number % 10000 / 1000
     hundreds = number % 1000 / 100
@@ -32,6 +31,7 @@ loop do
 
     if user_number == 0
         puts "Goodbye!"
+        break
     end
 
     puts "Your number: #{user_number}"
@@ -42,7 +42,7 @@ loop do
         case index
             when 0 then puts "  - Ones Place: #{number_in_place}"
             when 1 then puts "  - Tens Place: #{number_in_place}"
-             when 2 then puts "  - Hundreds Place: #{number_in_place}"
+            when 2 then puts "  - Hundreds Place: #{number_in_place}"
             when 3 then puts "  - Thousands Place: #{number_in_place}"
         end
     end
