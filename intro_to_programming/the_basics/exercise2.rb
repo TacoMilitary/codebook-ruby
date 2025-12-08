@@ -4,10 +4,10 @@ def number_places_upto_1000(number)
 
     # checks if the place even exists in the number.
     # uses modulo on the thousands place to strip the number of any other places above one thousand
-    thousands = number >= 1000 ? number % 10000 / 1000 : 0
-    hundreds = number >= 100 ? number % 1000 / 100 : 0
-    tens = number >= 10 ? number % 100 / 10 : 0
-    ones = number >= 1 ? number % 10 : 0
+    thousands = number % 10000 / 1000
+    hundreds = number % 1000 / 100
+    tens = number % 100 / 10
+    ones = number % 10
 
 =begin
     returns each place in an array of reverse order, 
