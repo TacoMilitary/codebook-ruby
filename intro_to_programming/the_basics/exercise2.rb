@@ -30,25 +30,21 @@ loop do
 
     user_number = gets.chomp.to_i
 
-    if user_number.is_a? Integer
-       if user_number == 0
-            puts "Goodbye!"
-       end
-
-        puts "Your number: #{user_number}"
-        puts "===="
-        places_array = number_places_upto_1000(user_number)
-
-        places_array.each_with_index do |number_in_place, index|
-            case index
-                when 0 then puts "  - Ones Place: #{number_in_place}"
-                when 1 then puts "  - Tens Place: #{number_in_place}"
-                when 2 then puts "  - Hundreds Place: #{number_in_place}"
-                when 3 then puts "  - Thousands Place: #{number_in_place}"
-            end
-        end
-        puts "===="
-    else
-        puts "Error: This is not an integer. Input the number 0 if you'd like to exit this loop."
+    if user_number == 0
+        puts "Goodbye!"
     end
+
+    puts "Your number: #{user_number}"
+    puts "===="
+    places_array = number_places_upto_1000(user_number)
+
+    places_array.each_with_index do |number_in_place, index|
+        case index
+            when 0 then puts "  - Ones Place: #{number_in_place}"
+            when 1 then puts "  - Tens Place: #{number_in_place}"
+             when 2 then puts "  - Hundreds Place: #{number_in_place}"
+            when 3 then puts "  - Thousands Place: #{number_in_place}"
+        end
+    end
+    puts "===="
 end
