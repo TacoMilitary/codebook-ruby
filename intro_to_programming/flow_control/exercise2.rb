@@ -1,5 +1,5 @@
 def upcase_short_strings(string_to_upcase)
-  string_to_upcase.upcase unless string_to_upcase.length <= 10
+  string_to_upcase.upcase! unless string_to_upcase.length <= 10
   
   #return changed or unchanged string
   string_to_upcase
