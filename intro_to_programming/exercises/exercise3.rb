@@ -1,0 +1,6 @@
+upto_10_array = 1.upto(10).to_a
+
+odd_numbers = upto_10_array.select {|n| n.odd?}
+
+puts "1 to 10 Array: #{upto_10_array}"
+puts "Odd Numbers Array: #{odd_numbers}"
