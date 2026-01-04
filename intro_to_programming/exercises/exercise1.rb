@@ -1,0 +1,1 @@
+1.upto(10).to_a.each {|n| puts n}
